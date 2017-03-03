@@ -32,13 +32,14 @@ module.exports={
 	  	}
 	  }),
       
-      //多页面
+      //多页面打包，
 	  new htmlWebpackPlugin({
 	  	filename:'a.html', 
 	  	template:'index.html', 
 	  	inject:'head',
 	  	title:'a',
-	  	chunks:['a','main']	  	
+	  	chunks:['a','main']	 //指定此页面需要的js
+	  	//excludeChunks:['b'] 	//引入除此之外的js
 	  }),
 	  new htmlWebpackPlugin({
 	  	filename:'b.html', 
