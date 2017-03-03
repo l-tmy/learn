@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title><%= htmlWebpackPlugin.options.title %></title>
 	<meta charset='utf-8'>
+	<!--<script type='text/javascript'src='<%= htmlWebpackPlugin.files.chunks.main.entry %>'></script>-->
 </head>
 <body>
- <script src='./src/script/main.js'></script>
+ <!--<script type='text/javascript' src='<%= htmlWebpackPlugin.files.chunks.a.entry %>'></script>-->
+ <%= htmlWebpackPlugin.options.date%>
+ 
+ <!--遍历出配置文件中可以设置的参数-->
+ <%for (var key in htmlWebpackPlugin.files){%>
+    <%=key %>:<%= JSON.stringify(htmlWebpackPlugin.files[key])%>
+ <%}%>
+<hr>
+ <%for (var key in htmlWebpackPlugin.options){%>
+    <%=key %>:<%= JSON.stringify(htmlWebpackPlugin.options[key])%>
+ <%}%>
+
 </body>
 </html>

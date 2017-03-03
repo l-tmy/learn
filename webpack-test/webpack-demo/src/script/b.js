@@ -1,0 +1,1 @@
+function b(str){alert(str)};

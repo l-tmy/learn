@@ -1,1 +1,1 @@
-function a(){};
+function a(str){alert(str)};
