@@ -5,7 +5,7 @@ module.exports={
 	entry:'./src/app.js' ,//打包入口 单个
 
 	output:{ //指明打包后的文件放在什么地方
-      path:'./dist', //本地地址      
+      path:'./dist', //打包后的本地地址      
       filename:'js/[name].bundle.js'      
 	},
 
