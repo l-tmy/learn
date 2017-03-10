@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<style>
+	 *{
+		margin:0;
+		padding:0;
+	  }	
+	  body{
+	  	width:100%;
+	  }
+	  #container{
+	  	position: relative;	  	  	
+	  	width:100%;	  	
+	  	overflow:hidden;	  	
+	  }
+	  #pageBox{
+	  	position:absolute;
+	  	width:100%;
+	  }
+      #pageBox div{
+      	width:100%;       	     	    	
+      }      
+	</style>
+	<script>
+		window.onload=function(){
+		  var oDiv=document.getElementById('container');
+		  var opageBox=document.getElementById('pageBox');
+		  var aDiv=opageBox.getElementsByTagName('div');
+		  var oHeight=document.documentElement.clientHeight;//获取可视区高度
+		  var oWidth=document.documentElement.clientWidth;
+          
+          /*
+           设置所有页面的高度
+          */
+		  console.log('共有'+aDiv.length+'种颜色。');
+		  for(var i=0;i<aDiv.length;i++){
+		  	aDiv[i].style.height=oHeight+'px';
+		  }
+          /*设置可视区高度和容器的top值*/
+          oDiv.style.height=oHeight+'px';
+          oDiv.style.width=oWidth+'px';
+          opageBox.style.height=aDiv.length*oHeight+'px';
+          opageBox.style.top=0; 
+          
+		  oDiv.ontouchstart=function(ev){	  	
+		  	var oEvent=ev||event;
+		  	var startX=oEvent.touches[0].clientX;
+		  	var startY=oEvent.touches[0].clientY;            
+
+		  	console.log('我开始触摸了('+startX+','+startY+')');           
+		
+
+		     oDiv.ontouchend=function(ev){
+		  	   var oEvent=ev||event;
+		  	   var endX=oEvent.changedTouches[0].clientX;
+		  	   var endY=oEvent.changedTouches[0].clientY;
+               var y=endY-startY;
+
+		  	   console.log('我结束触摸了('+endX+','+endY+')');
+		  	   console.log('我在竖直方向上移动了'+y+'px');
+		  	   
+		  	   if(y>100){
+                 console.log('向下移动');
+
+                 if(opageBox.offsetTop>-oHeight){
+                 	opageBox.style.top=0;
+                 }else{
+                 	opageBox.style.top=opageBox.offsetTop+oHeight+'px';
+                 }
+                 
+		  	   }
+
+		  	   if(y<-100){
+                 console.log('向上移动');
+
+                 if(opageBox.offsetTop<-(aDiv.length-2)*oHeight){
+                 	opageBox.style.top=-(aDiv.length-1)*oHeight+'px';
+                 }else{
+                 	opageBox.style.top=opageBox.offsetTop-oHeight+'px'; 
+                 } 
+
+		  	   }
+		     }
+		  }
+		  
+		  
+		}
+	</script>
+</head>
+<body>
+  <div id='container'>
+    <div id='pageBox'>        
+    	<div style='background-color:red'>1</div>
+  	    <div style='background-color:green'>2</div>
+  	    <div style='background-color:black'>3</div>
+  	    <div style='background-color:pink'>4</div>
+  	    <div style='background-color:orange'>5</div>
+  	    <div style='background-color:blue'>6</div>
+    </div>  	
+  </div>
+</body>
+</html>
