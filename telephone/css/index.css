@@ -13,9 +13,10 @@
 	zoom:1;
 }
 
-#contanier{
+#container{
     width:100%;
-    height:auto;    
+    height:auto; 
+    /*min-width:1325px;*/ 
 }
 /*top*/
 #top{	
@@ -132,7 +133,7 @@
 #middle .middlewords{
     position:absolute;
     z-index:-1;    
-    left:8%;
+    left:4%;
     color:#6CF;
     font-size:36px;
     animation:third 2.5s linear 1;
