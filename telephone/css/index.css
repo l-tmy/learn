@@ -1,0 +1,461 @@
+*{
+	padding:0;
+	margin:0;
+}
+.clear:after{
+    content:'';
+    display: block;
+    visibility:hidden;
+    clear:both;
+    height:0;
+}
+.clear{
+	zoom:1;
+}
+
+#contanier{
+    width:100%;
+    height:auto;    
+}
+/*top*/
+#top{	
+	position:relative;
+    width:100%;        
+}
+#top .back{
+    position:absolute;
+    width:100%;
+}
+#top .bannerword{
+    position: absolute;
+    z-index: 2;
+    left:50%;
+    margin-left:-205px;
+    width:410px;
+    height:auto;    
+	color: #fff;
+	font-size: 45px;
+	font-family:Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", sans-serif;
+    padding-top: 16%;
+    text-align: center;    
+}
+ .down{
+    position: relative;
+    animation: myfirst 1.2s linear infinite alternate;
+    -moz-animation: myfirst 1.2s linear infinite alternate;
+    -webkit-animation:myfirst 1.2s linear infinite alternate;
+}
+@keyframes myfirst{
+    0%{top:0px;}    
+    100%{top:20px;} 
+}
+@-moz-keyframes myfirst{
+    0%{top:0px;}    
+    100%{top:20px;} 
+}
+@-webkit-keyframes myfirst{
+    0%{top:0px;}    
+    100%{top:20px;}
+}
+#top .handphone{    
+    position:relative;
+    animation:second 2s linear 1 ;
+    -webkit-animation:second 2s linear 1 ;
+    -moz-animation:second 2s linear 1;
+}
+@keyframes second{
+    0%{left:-100%;opacity:0;}  
+    50%{left:-50%;opacity:0.3;} 
+    100%{left:0;opacity:1;} 
+}
+@-webkit-keyframes second{
+    0%{left:-100%;opacity:0;}  
+    50%{left:-50%;opacity:0.3;} 
+    100%{left:0;opacity:1;} 
+}
+@-moz-keyframes second{
+    0%{left:-100%;opacity:0;}  
+    50%{left:-50%;opacity:0.3;} 
+    100%{left:0;opacity:1;} 
+}
+
+#middle{
+    position: relative;
+    width: 100%;
+    height:auto;
+}
+#middle .mob{
+    width:100%;
+    height:auto;    
+}
+#middle .mob img{
+    width:100%;
+    height:auto;
+}
+#middle .mob1{
+    position: relative; /*两个分开写是为了占据空间，消除绝对定位带来的影响*/
+    animation:four 1s linear;
+    -webkit-animation:four 1s linear;
+    -moz-animation:four 1s linear;
+}
+@-moz-keyframes four{
+    0%{left:-100%;opacity:0;}
+    100%{left:0;opacity: 1;}
+}
+@keyframes four{
+    0%{left:-100%;opacity:0;}
+    100%{left:0;opacity: 1;}
+}
+@-webkit-keyframes four{
+    0%{left:-100%;opacity:0;}
+    100%{left:0;opacity: 1;}
+}
+#middle .mob2{
+    position: absolute;
+    top:0;
+    animation:four 1.5s linear;
+    -webkit-animation:four 1.5s linear;
+    -moz-animation:four 1.5s linear;
+}
+@-moz-keyframes four{
+    0%{left:-100%;opacity:0;}
+    100%{left:0;opacity: 1;}
+}
+@keyframes four{
+    0%{left:-100%;opacity:0;}
+    100%{left:0;opacity: 1;}
+}
+@-webkit-keyframes four{
+    0%{left:-100%;opacity:0;}
+    100%{left:0;opacity: 1;}
+}
+#middle .middlewords{
+    position:absolute;
+    z-index:-1;    
+    left:8%;
+    color:#6CF;
+    font-size:36px;
+    animation:third 2.5s linear 1;
+    -webkit-animation:third 2.5s linear 1;
+    -moz-animation:third 2.5s linear 1;
+}
+@keyframes third{
+    0%{top:-50%;opacity:0;}
+    60%{top:-25%;opacity:0.5;}
+    100%{top:0;opacity:1;}
+}
+@-webkit-keyframes third{
+    0%{top:-50%;opacity:0;}
+    60%{top:-25%;opacity:0.5;}
+    100%{top:0;opacity:1;}
+}
+@-moz-keyframes third{
+    0%{top:-50%;opacity:0;}
+    60%{top:-25%;opacity:0.5;}
+    100%{top:0;opacity:1;}
+}
+#nav{
+    width:728px;
+    margin:0 auto;
+    text-align: center;
+    font-size:0; /*消除浏览器默认的3px间距*/
+    overflow: hidden;
+}
+#nav .sheji{
+    font-size:40px;
+    color:#6FF;
+    font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+#nav .navcont{
+    margin-top:10px;
+}
+#nav .navcont .cont{
+    width:104px;
+    position: relative;
+}
+#nav .navcont .c4{
+    animation:c4 2s ease;
+    -webkit-animation:c4 2s ease;
+    -moz-animation:c4 2s ease;
+}
+@keyframes c4{
+    from{bottom:-100%;opacity:0}
+    to{bottom:0;opacity:1;}
+}
+@-moz-keyframes c4{
+    from{bottom:-100%;opacity:0}
+    to{bottom:0;opacity:1;}
+}
+@-webkit-keyframes c4{
+    from{bottom:-100%;opacity:0}
+    to{bottom:0;opacity:1;}
+}
+#nav .navcont .c3{
+    animation:c3 2s ease;
+    -webkit-animation:c3 2s ease;
+}
+@keyframes c3{
+    from{left:-500%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+@-webkit-keyframes c3{
+    from{left:-500%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+@-moz-keyframes c3{
+    from{left:-500%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+#nav .navcont .c5{
+    animation:c5 2s ease ;
+    -webkit-animation:c5 2s ease ;
+}
+@keyframes c5{
+    from{right:-500%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+@-moz-keyframes c5{
+    from{right:-500%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+@-webkit-keyframes c5{
+    from{right:-500%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+#nav .navcont .c2{
+    animation:c2 2.3s ease ;
+    -webkit-animation:c2 2.3s ease ;
+}
+@keyframes c2{from{
+    left:-300%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+@-moz-keyframes c2{from{
+    left:-300%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+@-webkit-keyframes c2{
+    from{left:-300%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+#nav .navcont .c7{
+    animation:c7 2.5s ease ;
+    -webkit-animation:c7 2.5s ease ;
+}
+@-moz-keyframes c7{from{
+    right:-300%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+@keyframes c7{from{
+    right:-300%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+@-webkit-keyframes c7{
+    from{right:-300%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+#nav .navcont .c1{
+    animation:c1 3s ease;
+    -webkit-animation:c1 3s ease;
+}
+@-moz-keyframes c1{from{
+    left:-200%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+@keyframes c1{from{
+    left:-200%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+@-webkit-keyframes c1{from{
+    left:-200%;opacity:0;}
+    to{left:0;opacity:1;}
+}
+#nav .navcont .c8{
+    animation:c8 3s ease ;
+    -webkit-animation:c8 3s ease ;
+}
+@-moz-keyframes c8{from{
+    right:-200%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+@keyframes c8{from{
+    right:-200%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+@-webkit-keyframes c8{
+    from{right:-200%;opacity:0;}
+    to{right:0;opacity:1;}
+}
+
+#bott{
+    position: relative;
+    width:100%;
+}
+#bott .bott_img1{
+    width:100%;
+    position: relative;
+}
+#bott .bott_img2{
+    width:40%;
+    left:30%;
+    top:104px;
+    position: absolute;
+}
+
+#bott .bottwords{
+    width:230px;
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    left:50%;
+    margin-left:-115px;
+}
+#bott .bottwords .sheji{
+    font-size:40px;
+    color:#6FF;
+    font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+}
+
+#bottom{
+    position: relative;
+}
+#bottom .img{
+    position: absolute;
+    top:0;
+    width:100%;
+    animation:rollin 2s ease;
+    -webkit-animation:roolin 2s ease;
+    -moz-animation:roolin 2s ease;
+}
+#bottom .img12{
+    position: relative;    
+}
+@keyframes roolin{
+    from{
+        opacity:0;
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -ms-transform:translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -moz-transform:translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);       
+    }
+    to{
+        opacity:1; 
+        -webkit-transform: none;
+        -ms-transform:none;
+        -moz-transform:none;
+        transform: none; 
+    }
+}
+@-webkit-keyframes roolin{
+    from{
+        opacity:0;
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -ms-transform:translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -moz-transform:translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);       
+    }
+    to{
+        opacity:1; 
+        -webkit-transform: none;
+        -ms-transform:none;
+        -moz-transform:none;
+        transform: none; 
+    }
+}
+@-moz-keyframes roolin{
+    from{
+        opacity:0;
+        transform: translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -ms-transform:translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);
+        -moz-transform:translate3d(-100%, 0, 0) rotate3d(0, 1, 1, -120deg);       
+    }
+    to{
+        opacity:1; 
+        -webkit-transform: none;
+        -ms-transform:none;
+        -moz-transform:none;
+        transform: none; 
+    }
+}
+
+#foot{
+    position: relative;
+    z-index: 999;
+}
+#foot .img{
+    position: absolute;
+    width:100%;
+
+}
+#foot .img1{
+    position: relative;
+}
+#foot .img1{
+    z-index:1;
+    animation:imgscroll 2s ease;
+    -moz-animation:imgscroll 2s ease;
+    -webkit-animation:imgscroll 2s ease;
+}
+#foot .img2{
+    z-index:-1;
+    animation:imgscroll 2.5s ease;
+    -moz-animation:imgscroll 2.5s ease;
+    -webkit-animation:imgscroll 2.5s ease;
+}
+#foot .img3{
+    z-index:-2;
+    animation:imgscroll 3s ease;
+    -moz-animation:imgscroll 3s ease;
+    -webkit-animation:imgscroll 3s ease;
+}
+#foot .img4{
+    z-index:-3;
+    animation:imgscroll 3.5s ease;
+    -webkit-animation:imgscroll 3.5s ease;
+    -moz-animation:imgscroll 3.5s ease;
+}
+@keyframes imgscroll{
+    from{left:-100%;opacity:1;}
+    to{left:0;opacity:1;}
+}
+@-webkit-keyframes imgscroll{
+    from{left:-100%;opacity:1;}
+    to{left:0;opacity:1;}
+}
+@-moz-keyframes imgscroll{
+    from{left:-100%;opacity:1;}
+    to{left:0;opacity:1;}
+}
+#footer{    
+    margin-top:-200px;
+    width:100%;
+    background:#09F;
+}
+#footer .footerwords{ 
+    margin:0 auto;   
+    padding-top:300px;
+    width:500px;
+    text-align: center;
+    color:#fff;
+    font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+#footer .footerwords .p1{font-size:40px;}
+#footer .footerwords .p2{font-size:80px;}
+#footer .footerwords .p3{padding-top:100px;font-size:60px;}
+#footer .footerwords .p4{font-size:25px;opacity:0.8;padding-bottom:220px;}
+#footer hr{
+    border:solid #fff 1px;
+    width:500px;
+    margin:0 auto;
+}
+#goback{
+    position:fixed;
+    z-index: 10000;
+    width:50px;
+    height:50px;
+    right:2%;
+    bottom:10%;
+    
+}
