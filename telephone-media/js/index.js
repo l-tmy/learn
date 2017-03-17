@@ -1,5 +1,5 @@
 window.onload=function(){
-	var oGotop=document.getElementById('goback');
+	//var oGotop=document.getElementById('goback');
 
 	oGotop.onclick=function(){
       returnTop();
@@ -29,12 +29,12 @@ function scrolld(){
           oscrollfn[i].style.display='none';
         }
     } 
-
-    if(scrollHeight>clientHeight){
+    
+    /*if(scrollHeight>clientHeight){
        oGotop.style.display='block';
     } else{
     	oGotop.style.display='none';
-    }
+    }*/
   
 }
 
